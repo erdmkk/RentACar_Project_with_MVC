@@ -1,0 +1,41 @@
+﻿@using RentACarEntities.Concrete
+@model RentACarEntities.Concrete.Cars
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            PRODUCT UPDATE PAGE
+        </h4>
+        <form asp-action="Update" asp-controller="Car" method="post">
+            <div style="display:none" class="mb-3">
+                <label for="carId" class="form-label">Car ID</label>
+                <input readonly asp-for="carID" type="number" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="carName" class="form-label">Car Name</label>
+                <input asp-for="carName" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="brandID" class="form-label">Brand ID</label>
+                <input type="number" class="form-control" asp-for="brandID">
+            </div>
+            <div class="mb-3">
+                <label for="Quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" asp-for="quantity">
+            </div>
+            <div class="mb-3">
+                <label for="vehicleType" class="form-label">Doors</label>
+                <input type="number" class="form-control" asp-for="doors">
+            </div>
+            <div class="mb-3">
+                <label for="Luggage" class="form-label">Luggage</label>
+                <input type="number" class="form-control" asp-for="carPrice">
+            </div>
+            <div class="mb-3">
+                <label for="categoryId" class="form-label">Category ID</label>
+                <input type="number" class="form-control" asp-for="categoryID">
+            </div>
+            <button type="submit" class="btn btn-primary">UPDATE PRODUCT</button>
+        </form>
+    </div>
+</div>
